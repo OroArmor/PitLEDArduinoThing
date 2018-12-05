@@ -11,15 +11,6 @@ void setup()
 
 void loop()
 {
-  //  sweep(255,0,0,30);
-  //  sweep(0,0,0,30);
-  //  sweep(0,255,0,30);
-  //  sweep(0,0,0,30);
-  //  sweep(0,0,255,30);
-  //  sweep(0,0,0,30);
-  //  sweep(255,255,255,30);
-  //  sweep(0,0,0,30);
-
   CRGB swirlColors[2] = {CRGB(0, 0, 0), CRGB(0, 0, 255)};
 
   swirl(swirlColors, 30, 6);
@@ -42,17 +33,6 @@ void swirl( CRGB colors[], int d, int repeat) { // colors to display, delay betw
   }
 }
 
-
-
-void sweep(byte red, byte green, byte blue, int d)
-{
-  for (int dot = 0; dot < NUM_LEDS; dot++)
-  {
-    leds[dot] = CRGB( red, green, blue); // set this pixel to color
-    FastLED.show();
-    delay(d);
-  }
-}
 /*
 
   //Example 1: set color from red, green, and blue components individually
