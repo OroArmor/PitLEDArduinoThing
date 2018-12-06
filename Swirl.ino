@@ -26,9 +26,9 @@ void swirl( CRGB colors[], int d, int repeat) { // colors to display, delay betw
       for (int k = 0; k < NUM_LEDS / (len * repeat) ; k++) { // display each led with correct color
         leds[(i + j + k) % NUM_LEDS] = colors[currentColor%len];
       }
+      currentColor++;
     }
     FastLED.show();
-    currentColor++;
     delay(d);
   }
 }
